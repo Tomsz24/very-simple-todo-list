@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.wrapper{
+  margin: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+.title {
+  padding: 20px 0;
+}
+.header__section {
+  display: flex;
+  flex-basis: 80%;
+  padding: 25px 15px;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+.header__form {
+  display: flex;
+  background-color: #fff;
+  padding: 25px 15px;
+  justify-content: space-between;
+  border-bottom: 10px solid #ddd;
+}
+
+.form__js-input {
+  font-size: 20px;
+  height: 45px;
+  line-height: 35px;
+  flex-grow: 1;
+  margin-right: 25px;
+  padding-left: 15px;
+}
+
+.form__js-addTask {
+  width: 20vw;
+  border: none;
+  background-color: teal;
+  color: #fff;
+  font-size: 20px;
+  height: 45px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.form__js-addTask:hover{
+  background-color: black;
+}
+
+.section {
+  display: flex;
+  flex-basis: 80%;
+  padding: 25px 15px;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.section__subtitle {
+  flex-basis: 100%;
+  padding: 0 0 15px;
+  border-bottom: 2px solid #ddd;
+}
+.taskList {
+  padding-top: 15px;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+.task {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+
+.taskContent{
+  flex-grow: 1;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.taskContent--active {
+  flex-grow: 1;
+  padding: 0 10px;
+  line-height: 30px;
+  text-decoration: line-through;
+}
+
+.section__addTask{
+  border: none;
+  background-color: green;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: .3s;
+} 
+.fa-check{
+  font-size: 16px;
+  margin: 5px;
+}
+.section__removeTask {
+  border: none;
+  background-color: red;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  margin-right: 0px;
+  cursor: pointer;
+  transition: .3s;
+}
+.fa-trash {
+  font-size: 16px;
+  margin: 5px;
+}
+
+.section__addTask:hover, .section__removeTask:hover {
+  transform: scale(1.2);
+}
+
+
+
+@media (max-width: 767px) {
+  .header__form {
+    flex-wrap: wrap;
+  }
+  .form__js-input {
+    width: 100%;
+    margin-right: 0;
+    
+  }
+  .form__js-addTask {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
