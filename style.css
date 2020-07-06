@@ -53,7 +53,7 @@ body {
 }
 
 .form__js-addTask:hover{
-  background-color: black;
+  transform: scale(1.12);
 }
 
 .section {
@@ -61,15 +61,36 @@ body {
   flex-basis: 80%;
   padding: 25px 15px;
   background-color: #fff;
-  border-bottom: 2px solid #ddd;
+  /* border-bottom: 2px solid #ddd; */
   flex-wrap: wrap;
 }
 
 .section__subtitle {
-  flex-basis: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
   padding: 0 0 15px;
   border-bottom: 2px solid #ddd;
 }
+
+.section__button--showHide, .section__button--allDone {
+  border: none;
+  color: teal;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 5px;
+  transition: .3s;
+}
+
+.--color {
+  color: #ccc;
+}
+
+.section__button--showHide:hover, .section__button--allDone:hover {
+  transform: scale(1.1);
+  color: hsl(180, 100%, 35%);
+}
+
 .taskList {
   padding-top: 15px;
   list-style: none;
@@ -87,6 +108,10 @@ body {
   padding: 15px;
   justify-content: space-between;
   border-bottom: 2px solid #ddd;
+}
+
+.task--hide {
+  display: none;
 }
 
 .taskContent{
@@ -148,5 +173,14 @@ body {
   .form__js-addTask {
     width: 100%;
     margin-top: 5px;
+  }
+  .section__subtitle {
+    grid-template-columns: unset;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .section__button{
+    margin: 10px;
   }
 }
